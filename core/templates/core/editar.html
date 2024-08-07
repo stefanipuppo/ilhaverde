@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if form.instance.pk %}Editar Planta{% else %}Adicionar Nova Planta{% endif %}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            color: #004d40;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #004d40;
+        }
+        .form-container {
+            background: #ffffff;
+            border: 1px solid #004d40;
+            border-radius: 5px;
+            padding: 20px;
+        }
+        .button {
+            background-color: #00796b;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .button:hover {
+            background-color: #004d40;
+        }
+        .form-container form {
+            display: flex;
+            flex-direction: column;
+        }
+        .form-container form label {
+            margin-bottom: 5px;
+        }
+        .form-container form input, .form-container form textarea {
+            margin-bottom: 10px;
+            padding: 8px;
+            border: 1px solid #004d40;
+            border-radius: 5px;
+        }
+        .form-container form button {
+            background-color: #00796b;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1>{% if form.instance.pk %}Editar Planta{% else %}Adicionar Nova Planta{% endif %}</h1>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Salvar</button>
+            </form>
+            <a href="{% url 'lista' %}" class="button">Voltar para lista</a>
+        </div>
+    </div>
+</body>
+</html>
