@@ -25,7 +25,7 @@ Este projeto foi uma experiência leve e divertida para mim, pois sou apaixonado
 
 1. Clone o repositório:
     ```bash
-    git clone https://github.com/seu-usuario/ilhaverde.git
+    git clone https://github.com/stefanipuppo/ilhaverde.git
     ```
 
 2. Navegue até o diretório do projeto:
