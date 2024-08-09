@@ -1,6 +1,24 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Planta
 from .forms import PlantaForm
+from .forms import ClienteForm
+from django.contrib import messages
+from .models import Cliente
+from pedido.models import Pedido 
+
+
+def home(request):
+    return render(request, 'core/home.html')
+
+def cliente_novo(request):
+    if request.method == "POST":
+        form = ClienteForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Cliente salvo com sucesso!')
+    else:
+        form = ClienteForm()
+    return render(request, 'cliente/cliente_form.html', {'form': form})
 
 def lista(request):
     plantas = Planta.objects.all()
@@ -35,3 +53,6 @@ def deletar(request, pk):
     planta = get_object_or_404(Planta, pk=pk)
     planta.delete()
     return redirect('lista')
+
+def pedido(request):
+    return render(request, 'core/pedido.html')
