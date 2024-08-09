@@ -1,67 +1,40 @@
 # Ilha Verde
 
-Ilha Verde é um sistema de gestão de floricultura desenvolvido em Django. Este projeto tem como objetivo permitir o gerenciamento de plantas, incluindo funcionalidades para listar, visualizar detalhes, adicionar, editar e deletar plantas.
+Ilha Verde é um sistema de gestão de floricultura desenvolvido em Django. O projeto permite o gerenciamento eficiente de plantas e pedidos, proporcionando funcionalidades para listar, visualizar detalhes, adicionar, editar e deletar plantas e pedidos. Este sistema também inclui a gestão de clientes.
+
 ## Sobre o Projeto
 
-Este projeto foi uma experiência leve e divertida para mim, pois sou apaixonado por plantas. Nomeei o projeto de "Ilha Verde" como uma referência à "Ilha da Magia", Florianópolis, onde moro.
+Nomeado em referência à "Ilha da Magia" (Florianópolis), o Ilha Verde é um projeto que visa facilitar a administração de floriculturas, oferecendo uma interface intuitiva e funcionalidades robustas para gerenciar o inventário e os pedidos.
 
+## Funcionalidades:
 
-## Funcionalidades
+### Gestão de Plantas
 
-- **Listagem de Plantas:** Visualize todas as plantas cadastradas.
-- **Detalhes da Planta:** Veja informações detalhadas sobre cada planta.
-- **Adicionar Planta:** Adicione novas plantas ao sistema.
-- **Editar Planta:** Edite as informações das plantas existentes.
-- **Deletar Planta:** Remova plantas do sistema.
+- **Listagem de Plantas**: Visualize todas as plantas cadastradas.
+- **Detalhes da Planta**: Veja informações detalhadas sobre cada planta.
+- **Adicionar Planta**: Insira novas plantas no sistema.
+- **Editar Planta**: Modifique as informações das plantas existentes.
+- **Deletar Planta**: Remova plantas do sistema.
 
-## Tecnologias Utilizadas
+### Gestão de Pedidos
 
-- **Python**
-- **Django**
-- **SQLite**
-- **HTML/CSS**
+- **Listagem de Pedidos**: Veja todos os pedidos realizados.
+- **Detalhes do Pedido**: Visualize detalhes completos de cada pedido.
+- **Criar Pedido**: Adicione novos pedidos com clientes e plantas associadas.
+- **Editar Pedido**: Atualize informações de pedidos existentes.
+- **Deletar Pedido**: Exclua pedidos do sistema.
 
-## Como Rodar o Projeto
+### Gestão de Clientes
 
-1. Clone o repositório:
-    ```bash
-    git clone https://github.com/stefanipuppo/ilhaverde.git
-    ```
+- **Listagem de Clientes**: Visualize todos os clientes cadastrados.
+- **Detalhes do Cliente**: Veja informações detalhadas sobre cada cliente.
+- **Adicionar Cliente**: Insira novos clientes no sistema.
+- **Editar Cliente**: Modifique as informações dos clientes existentes.
+- **Deletar Cliente**: Remova clientes do sistema.
 
-2. Navegue até o diretório do projeto:
-    ```bash
-    cd ilhaverde
-    ```
+### Tecnologias Utilizadas
 
-3. Crie e ative um ambiente virtual:
-    ```bash
-    python -m venv venv
-    source venv/bin/activate  # No Windows use `venv\Scripts\activate`
-    ```
-
-4. Instale as dependências:
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-5. Aplique as migrações:
-    ```bash
-    python manage.py migrate
-    ```
-
-6. Rode o servidor:
-    ```bash
-    python manage.py runserver
-    ```
-
-7. Acesse o sistema em `http://127.0.0.1:8000/`.
-
-### Informações sobre as Plantas:
-   - **Nome**
-   - **Espécie**
-   - **Descrição** 
-   - **Preço** 
-
-### Contribuição:
-
-Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e enviar pull requests.
+- **Django**: Framework web para desenvolvimento rápido.
+- **Python**: Linguagem de programação utilizada para o desenvolvimento do sistema.
+- **SQLite**: Banco de dados leve e integrado para desenvolvimento e teste.
+- **HTML/CSS**: Para a criação e estilização das interfaces de usuário.
